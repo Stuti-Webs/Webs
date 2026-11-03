@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Output Demo</title>
+</head>
+<body>
+<h1>JavaScript Basic Programs</h1>
+
+<script>
+  alert("Welcome to Emerging Technologies Information Portal");
+</script>
+
+<h2>Mathematical Operations Using JavaScript</h2>
+Enter First Number: <input type="number" id="n1"><br><br>
+Enter Second Number: <input type="number" id="n2"><br><br>
+<button onclick="calculate()">Calculate</button>
+<h3 id="result"></h3>
+
+<h2>Current Date and Time</h2>
+<button onclick="showDate()">Display Date and Time</button>
+<h3 id="datetime"></h3>
+
+<script>
+function calculate() {
+  var a = parseFloat(document.getElementById("n1").value);
+  var b = parseFloat(document.getElementById("n2").value);
+  document.getElementById("result").innerHTML =
+    "Addition = " + (a + b) + "<br>" +
+    "Subtraction = " + (a - b) + "<br>" +
+    "Multiplication = " + (a * b) + "<br>" +
+    "Division = " + (b !== 0 ? a / b : "Cannot divide by zero");
+}
+function showDate() {
+  document.getElementById("datetime").innerHTML = "Current Date and Time: " + new Date();
+}
+</script>
+</body>
+</html>
